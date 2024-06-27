@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>Update Working Schedule</h1>
+<mat-divider></mat-divider>
+
+<form [formGroup]="editWorkingSchedule">
+  <div mat-dialog-content>
+    <div class="container" fxLayout="column" fxLayoutGap="16px">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Work ID</mat-label>
+        <input matInput formControlName="work_id">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label> Day</mat-label>
+        <input matInput formControlName="day">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label> start_time</mat-label>
+        <input matInput formControlName="start_time" type="time">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label> end_time</mat-label>
+        <input matInput formControlName="end_time" type="time">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>  doctor_id</mat-label>
+        <input matInput formControlName="doctor_id">
+      </mat-form-field>
+
+    </div>
+  </div>
+
+  <div mat-dialog-actions align="end">
+    <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" [disabled]="editWorkingSchedule.invalid" type="submit">Update</button>
+  </div>
+</form>

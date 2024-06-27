@@ -1,0 +1,35 @@
+
+<div class="container-fluid">
+    <section class="wrapper" [ngClass]="{'active': isLoginActive}">
+        <div class="form signup">
+          <header (click)="toggleForm('signup')">
+            <img  src="../../../../assets/img/logo.png " alt="Profile Image" style="width: 120px; height: 100px;">
+           <span>Signup</span> 
+
+          </header>
+          <form action="#">
+            <input type="text" placeholder="Full name" required />
+            <input type="text" placeholder="Email address" required />
+            <input type="phone" placeholder="Phone Number" required />
+            <input type="password" placeholder="Password" required />
+            <div class="checkbox">
+              <input type="checkbox" id="signupCheck" />
+              <label for="signupCheck">I accept all terms & conditions</label>
+            </div>
+            <input type="submit" value="Signup" />
+          </form>
+        </div>
+      
+        <div class="form login">
+          <header (click)="toggleForm('login')">Login</header>
+          <form action="#">
+            <input type="text" placeholder="Email address" required />
+            <input type="password" placeholder="Password" required />
+            <a href="#">Forgot password?</a>
+            <input type="submit" value="Login" />
+          </form>
+        </div>
+      </section>
+</div>
+
+  
